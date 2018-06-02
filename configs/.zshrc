@@ -93,11 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#start zshel in home location
-if [ -t 1 ]; then
-  cd ~
-fi
-
 #correct dir colors
 if [ -f ~/.dir_colors ]; then  
   eval `dircolors ~/.dir_colors`

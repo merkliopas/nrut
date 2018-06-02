@@ -76,6 +76,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set mouse=a
 set encoding=utf-8
 set backspace=2
+set ttymouse=xterm2
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
