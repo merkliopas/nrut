@@ -57,5 +57,6 @@ cd pkg-config-0.29.2
 ./configure --prefix=$HOME
 make
 make install
+cd ../ && rm -rf pkg-config-0.29.2*
 
 echo "PLEASE RESTART YOUR TERMINAL NOW"
