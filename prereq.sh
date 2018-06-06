@@ -44,12 +44,6 @@ make
 make install
 cd ../ && rm -rf temp
 
-./configure --prefix=$HOME\
-		     CFLAGS="-I$HOME/include -I$HOME/include/ncurses"\
-		     LDFLAGS="-L$HOME/lib -L$HOME/include/ncurses -L$HOME/include"\
-		     CPPFLAGS="-I$HOME/include -I$HOME/include/ncurses"\
-		     LDFLAGS="-static -L$HOME/include -L$HOME/include/ncurses -L$HOME/lib"
-
 #install pkg-config: if error, comment this out and try again
 wget https://pkg-config.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 tar xzf pkg-config-0.29.2.tar.gz
