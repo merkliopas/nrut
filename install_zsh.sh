@@ -8,20 +8,6 @@ function del_zsh {
 }
 trap del_zsh EXIT
 
-#finish installing npm (npm.sh has to be executed before this and terminal restarted)
-source $NVM_DIR/nvm.sh
-nvm install stable
-nvm alias default stable
-
-#add solarized colors
-wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark  
-mv dircolors.256dark ~/.dir_colors   
-
-#solarized theme for terminator
-npm install --global base16-builder
-mkdir -p ~/.config/terminator
-base16-builder -s solarized -t terminator -b dark > ~/.config/terminator/config
-
 #zsh installation is a little bit more involved
 wget -O zsh.tar.gz https://sourceforge.net/projects/zsh/files/latest/download
 mkdir zsh && tar -xvzf zsh.tar.gz -C zsh --strip-components 1
