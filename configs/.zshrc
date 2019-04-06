@@ -103,8 +103,6 @@ compinit
 
 #alias list
 alias instp='Rscript -e "devtools::install()"'
-alias xdg-open=wsl-open
-export BROWSER=wsl-open
 
 #some paths
 PUZL='/mnt/d/puzl-prelim/'
@@ -118,12 +116,22 @@ LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 C_INCLUDE_PATH=$HOME/include
 CPLUS_INCLUDE_PATH=$HOME/include
 
-export NVM_DIR="$HOME/.nvm"
-NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+#some functions
+switch_theme(){
+        if [ $1 = "dark" ]; then
+                suff="light"
+        elif [ $1 = "light" ]; then
+                suff="dark"
+        else exit 1
+        fi
 
-#slows down load tim of the shell, so left as an archive
-#if [ -d "~/.nvm" ]; then
-#	source "$NVM_DIR/nvm.sh"
-#fi
+        mv ~/.dir_colors ~/dircolors$suff   
+        mv ~/dircolors$1 ~/.dir_colors
+        source ~/.zshrc
+}
+
+kill_smth(){
+        ps -ef | grep $1 | grep -v grep | awk '{print $2}' | xargs -r kill -9
+}
+
+
