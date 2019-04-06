@@ -69,7 +69,7 @@ filetype plugin indent on    " required
 """VIM BEHAVIOUR OPTIONS""
 """"""""""""""""""""""""""
 syntax on
-"set background=dark
+set background=dark
 set t_Co=256 
 set nu
 set timeoutlen=1000 ttimeoutlen=0
