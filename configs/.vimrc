@@ -82,6 +82,9 @@ let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
+so ~/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim
+call togglebg#map("<F5>")
+
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
