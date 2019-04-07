@@ -36,7 +36,7 @@ rm -rf temp
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #clone solarized colors
-git clone https://github.com/altercation/vim-colors-solarized ~/.vim/bundle
+git clone https://github.com/altercation/vim-colors-solarized ~/.vim/bundle/vim-colors-solarized
 mkdir -p ~/.vim/colors
 cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/ 
 
