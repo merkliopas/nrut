@@ -68,15 +68,19 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""
 """VIM BEHAVIOUR OPTIONS""
 """"""""""""""""""""""""""
-syntax on
-set background=dark
-set t_Co=256 
 set nu
 set timeoutlen=1000 ttimeoutlen=0
 set mouse=a
 set encoding=utf-8
 set backspace=2
 set ttymouse=xterm2
+
+set t_Co=256
+syntax enable
+let g:solarized_termtrans = 1    
+"let g:solarized_termcolors=256                                                  
+set background=dark
+colorscheme solarized
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
