@@ -6,7 +6,6 @@ What do these bash scripts do?
 * `install_tmux.sh` installs the newest tmux version
 * `install_vim.sh` installs newest vim version and compiles it from source
 * `install_zsh.sh` installs zsh and oh-my-zsh
-* `install_wslopen.sh` installs a very cool applet to open files/links/locations from WSL terminal using Windows binaries
 * `cinfigs.sh` copies my default terminator, vim, tmux and zsh config files to default directory (this should be run last).
 
 One might need to run commands below to deal with insecure directories if zsh is installed:
