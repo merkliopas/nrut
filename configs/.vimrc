@@ -31,7 +31,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
-Plugin 'jalvesaq/Nvim-R'
 Plugin 'swekaj/php-foldexpr.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
@@ -102,16 +101,6 @@ let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 let g:slime_preserve_curpos = 1
 
-"nvim_r
-let R_term = 'terminator'
-let R_in_buffer = 0
-let R_applescript = 0
-let R_tmux_split = 1
-let R_assign = 0
-let r_indent_align_args = 1
-let r_indent_ess_comments = 1
-let r_indent_ess_compatible = 1
-
 "status line
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
@@ -121,7 +110,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 "add stuff for buffer line
 set hidden
-nnoremap <C-E> :bnext<CR>
+nnoremap <LocalLeader>l :bnext<CR>
+nnoremap <LocalLeader>h :bprevious<CR>
+
+map zl zL
+map zh zH
 
 "tagbar
 let g:tagbar_type_r = {
