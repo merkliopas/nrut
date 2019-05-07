@@ -8,6 +8,7 @@ PATH=\$HOME/bin:\$PATH
 LD_LIBRARY_PATH=\$HOME/lib:\$LD_LIBRARY_PATH
 C_INCLUDE_PATH=\$HOME/include
 CPLUS_INCLUDE_PATH=\$HOME/include
+EOT
 
 #install ncurses
 git clone https://github.com/gittup/ncurses temp
