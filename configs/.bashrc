@@ -116,9 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#force zsh as a shell. hacky :)
-if [ -t 1 ]; then  
-  exec zsh
-fi 
 
 

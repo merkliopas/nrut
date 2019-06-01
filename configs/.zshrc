@@ -111,10 +111,7 @@ TTMOD='/mnt/d/TTmodelling'
 TTDB='/mnt/d/dataTourismDB'
 TTDAT='/mnt/d/dataTourismForecast'
 
-PATH=$HOME/bin:$PATH
-LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
-C_INCLUDE_PATH=$HOME/include
-CPLUS_INCLUDE_PATH=$HOME/include
+PATH=$HOME/unix/bin:$PATH
 
 #some functions
 switch_theme(){

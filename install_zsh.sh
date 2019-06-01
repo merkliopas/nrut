@@ -12,11 +12,7 @@ trap del_zsh EXIT
 wget -O zsh.tar.gz https://sourceforge.net/projects/zsh/files/latest/download
 mkdir zsh && tar -xvzf zsh.tar.gz -C zsh --strip-components 1
 cd zsh
-./configure --prefix=$HOME\
-	CFLAGS="-I$HOME/include -I$HOME/include/ncurses"\
-	LDFLAGS="-L$HOME/lib -L$HOME/include/ncurses -L$HOME/include"\
-	CPPFLAGS="-I$HOME/include -I$HOME/include/ncurses"\
-	LDFLAGS="-static -L$HOME/include -L$HOME/include/ncurses -L$HOME/lib"
+./configure --prefix=$HOME/unix
 make
 make install
 
